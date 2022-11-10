@@ -7,15 +7,15 @@
       <Schema Namespace="Хранилище LR2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="User">
           <Key>
-            <PropertyRef Name="Код сотрудника" />
+            <PropertyRef Name="CodeStaff" />
           </Key>
-          <Property Name="Код сотрудника" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Должность" Type="nvarchar" MaxLength="50" />
-          <Property Name="ФИО" Type="nvarchar" MaxLength="50" />
-          <Property Name="Логин" Type="nvarchar" MaxLength="50" />
-          <Property Name="Пароль" Type="nvarchar" MaxLength="50" />
-          <Property Name="Последний вход" Type="nvarchar" MaxLength="50" />
-          <Property Name="Тип входа" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodeStaff" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Position" Type="nvarchar" MaxLength="150" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="150" />
+          <Property Name="Log" Type="nvarchar" MaxLength="150" />
+          <Property Name="Password" Type="nvarchar" MaxLength="150" />
+          <Property Name="LastEnter" Type="nvarchar" MaxLength="150" />
+          <Property Name="TypeEnter" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityContainer Name="Хранилище LR2ModelContainer">
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -27,17 +27,17 @@
       <Schema Namespace="LR2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="User">
           <Key>
-            <PropertyRef Name="Код_сотрудника" />
+            <PropertyRef Name="CodeStaff" />
           </Key>
-          <Property Name="Код_сотрудника" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Должность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ФИО" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Логин" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Пароль" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Последний_вход" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Тип_входа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodeStaff" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Log" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="LastEnter" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TypeEnter" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="LR2Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="User" EntityType="Self.User" />
         </EntityContainer>
       </Schema>
@@ -45,17 +45,17 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище LR2ModelContainer" CdmEntityContainer="LR2Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище LR2ModelContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="LR2Model.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Код_сотрудника" ColumnName="Код сотрудника" />
-                <ScalarProperty Name="Должность" ColumnName="Должность" />
-                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
-                <ScalarProperty Name="Логин" ColumnName="Логин" />
-                <ScalarProperty Name="Пароль" ColumnName="Пароль" />
-                <ScalarProperty Name="Последний_вход" ColumnName="Последний вход" />
-                <ScalarProperty Name="Тип_входа" ColumnName="Тип входа" />
+                <ScalarProperty Name="CodeStaff" ColumnName="CodeStaff" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Log" ColumnName="Log" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LastEnter" ColumnName="LastEnter" />
+                <ScalarProperty Name="TypeEnter" ColumnName="TypeEnter" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

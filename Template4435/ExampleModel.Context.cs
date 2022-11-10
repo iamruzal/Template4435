@@ -13,10 +13,10 @@ namespace Template4435
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LR2Entities : DbContext
+    public partial class Entities : DbContext
     {
-        public LR2Entities()
-            : base("name=LR2Entities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     

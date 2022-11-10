@@ -39,6 +39,8 @@
 
         <Button x:Name="Import" Click="Import_Click" Content="Import" Grid.Row="15" Height="31" VerticalAlignment="Top"></Button>
         <Button x:Name="Export" Click="Export_Click" Content="Export" Grid.Row="16"></Button>
+        <Button x:Name="ExportWord" Click="ExportWord_Click" Content="Export Word" Grid.Row="17"></Button>
+        <Button x:Name="JSON" Click="JSON_Click" Content="JSON" Grid.Row="18"></Button>
         <Button x:Name="BnTask" Click="BnTask_Click" Content="Задача" Grid.Row="14"></Button>
         <Button x:Name="BnnTask" Click="BnnTask_Click" Content="Задача" Grid.Row="12"></Button>
     </Grid>

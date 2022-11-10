@@ -14,12 +14,12 @@ namespace Template4435
     
     public partial class User
     {
-        public int Код_сотрудника { get; set; }
-        public string Должность { get; set; }
-        public string ФИО { get; set; }
-        public string Логин { get; set; }
-        public string Пароль { get; set; }
-        public string Последний_вход { get; set; }
-        public string Тип_входа { get; set; }
+        public string CodeStaff { get; set; }
+        public string Position { get; set; }
+        public string FullName { get; set; }
+        public string Log { get; set; }
+        public string Password { get; set; }
+        public string LastEnter { get; set; }
+        public string TypeEnter { get; set; }
     }
 }
